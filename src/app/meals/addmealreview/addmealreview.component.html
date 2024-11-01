@@ -1,0 +1,117 @@
+<app-sidebar></app-sidebar>
+<main class="main-content">
+  <app-layout></app-layout>
+
+
+
+  <div class="content-inner mt-5 py-0">
+    <div class="recent-orders">
+      <h2 class="heading">Recently Received Meals</h2><br>
+      <div class="row card-container">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/200x150" alt="Meal Image" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Burger House</h5>
+              <p class="card-text">Veg Burger</p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#addReviewModal">Add Review</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/200x150" alt="Meal Image" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Pizza Palace</h5>
+              <p class="card-text">Pepperoni Pizza</p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#addReviewModal">Add Review</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="previous-orders">
+      <h2 class="heading">Previous Orders</h2><br>
+      <div class="row card-container">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Burger House</h5>
+              <p class="card-text">Order #12234</p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#addReviewModal">Add Review</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Pizza Palace</h5>
+              <p class="card-text">Order #12235</p>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#addReviewModal">Add Review</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="addReviewModal" tabindex="-1" role="dialog" aria-labelledby="addReviewModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addReviewModalLabel"><i class="fas fa-pencil-alt"></i> Add Review</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label><i class="fas fa-utensils"></i> Food Quality:</label>
+              <div class="rating-stars">
+                <label for="star1" title="Poor"><i class="fas fa-star"></i></label>
+                <label for="star2" title="Fair"><i class="fas fa-star"></i></label>
+                <label for="star3" title="Good"><i class="fas fa-star"></i></label>
+                <label for="star4" title="Very Good"><i class="fas fa-star"></i></label>
+                <label for="star5" title="Excellent"><i class="fas fa-star"></i></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-motorcycle"></i> Delivery:</label>
+              <div class="rating-stars">
+                <label for="star1" title="Poor"><i class="fas fa-star"></i></label>
+                <label for="star2" title="Fair"><i class="fas fa-star"></i></label>
+                <label for="star3" title="Good"><i class="fas fa-star"></i></label>
+                <label for="star4" title="Very Good"><i class="fas fa-star"></i></label>
+                <label for="star5" title="Excellent"><i class="fas fa-star"></i></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-store-alt"></i> Restaurant:</label>
+              <div class="rating-stars">
+                <label for="star1" title="Poor"><i class="fas fa-star"></i></label>
+                <label for="star2" title="Fair"><i class="fas fa-star"></i></label>
+                <label for="star3" title="Good"><i class="fas fa-star"></i></label>
+                <label for="star4" title="Very Good"><i class="fas fa-star"></i></label>
+                <label for="star5" title="Excellent"><i class="fas fa-star"></i></label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label><i class="fas fa-comment-alt"></i> Comments:</label>
+              <textarea class="form-control" id="comments"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times"></i> Close</button>
+          <button type="button" class="btn btn-primary"><i class="fas fa-save"></i> Save changes</button>
+        </div>
+      </div>
+      </div>
+  </div>
+  <app-footer></app-footer>
+
+  </main>
+
+
+

@@ -1,0 +1,18 @@
+/* Base logo styles */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-img {
+  width: 60px; /* Default width */
+  height: auto;
+  transition: width 0.3s ease; /* Smooth transition when resizing */
+}
+
+/* Adjust logo size when sidebar is closed */
+.sidebar-closed .logo-img {
+  width: 120px; /* Slightly larger width when sidebar is closed */
+}

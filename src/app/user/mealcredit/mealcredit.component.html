@@ -1,0 +1,127 @@
+<app-sidebar></app-sidebar>
+<main class="main-content">
+  <app-layout></app-layout>
+
+  <div class="content-inner mt-5 py-0">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-primary text-white text-center">
+            <h4 class="m-0">Meal Credit</h4>
+            <p class="m-0">Credit Available: $50</p>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4" (click)="selectedSection = 'credit'">
+                <div class="card bg-primary border-0 rounded-3">
+                  <div class="card-body">
+                    <i class="fas fa-credit-card fa-3x mb-3 text-white"></i>
+                    <h5 class="text-white mb-0" >Credit Available</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" (click)="selectedSection = 'history'">
+                <div class="card bg-secondary border-0 rounded-3">
+                  <div class="card-body">
+                    <i class="fas fa-history fa-3x mb-3 text-white"></i>
+                    <h5 class="text-white mb-0" >History</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" (click)="selectedSection = 'faq'">
+                <div class="card bg-info border-0 rounded-3">
+                  <div class="card-body">
+                    <i class="fas fa-question-circle fa-3x mb-3 text-white"></i>
+                    <h5 class="text-white mb-0" >FAQ</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="wizard-content">
+              <form id="mealCreditWizard">
+                <div class="wizard-pane active" id="credit-available" data-bs-wizard-pane *ngIf="selectedSection === 'credit'">
+                  <h4 class="mb-3">Credit Available</h4>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p>You currently have $50 in meal credit available to use.</p>
+                      <p>Your meal credit can be used to purchase any meal on our website, up to the value of your credit.</p>
+                      <p>To use your meal credit, simply select the option at checkout and the credit will be applied to your order.</p>
+                    </div>
+                    <div class="col-md-6">
+                      <img src="https://picsum.photos/500/400" class="img-fluid rounded" alt="meal credit image">
+                    </div>
+                  </div>
+                </div>
+                <div class="wizard-pane" id="history" data-bs-wizard-pane *ngIf="selectedSection === 'history'">
+                  <h4 class="mb-3">History</h4>
+                  <p>Here is a list of your recent meal credit usage:</p>
+                  <ul>
+                    <li>Used $10 on 2022-02-14 to buy breakfast</li>
+                    <li>Used $20 on 2022-02-19 to buy lunch</li>
+                    <li>Used $15 on 2022-03-02 to buy dinner</li>
+                  </ul>
+                </div>
+                <div class="wizard-pane" id="faq" data-bs-wizard-pane *ngIf="selectedSection === 'faq'">
+                  <h4 class="mb-3">FAQ</h4>
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Question 1
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Answer 1
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Question 2
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Answer 2
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Question 3
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Answer 3
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+
+
+
+
+
+                  <app-footer></app-footer>
+</main>

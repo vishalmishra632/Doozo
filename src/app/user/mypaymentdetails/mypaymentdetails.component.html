@@ -1,0 +1,281 @@
+
+<app-sidebar></app-sidebar>
+<main class="main-content">
+  <app-layout></app-layout>
+
+
+  <div class="content-inner mt-5 py-0">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header">
+            <h4 class="card-title">Payment Methods</h4>
+          </div>
+          <div class="card-body">
+            <ul class="nav nav-pills flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#credit-card" data-toggle="tab">Credit Card/Debit Card</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#upi" data-toggle="tab">UPI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#net-banking" data-toggle="tab">Net Banking</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#wallets" data-toggle="tab">Wallets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#saved-details" data-toggle="tab">Saved Details</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="credit-card">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h4 class="card-title">Credit Card/Debit Card</h4>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="cardNumber">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number">
+                  </div>
+                  <div class="form-group">
+                    <label for="cardName">Name on Card</label>
+                    <input type="text" class="form-control" id="cardName" placeholder="Enter name on card">
+                  </div>
+                  <div class="form-group">
+                    <label for="expiryDate">Expiry Date</label>
+                    <input type="text" class="form-control" id="expiryDate" placeholder="MM / YY">
+                  </div>
+                  <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" class="form-control" id="cvv" placeholder="Enter CVV">
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="primaryCard">
+                      <label class="form-check-label" for="primaryCard">
+                        Make this my primary card
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="upi">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h4 class="card-title">UPI</h4>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="upiId">UPI ID</label>
+                    <input type="text" class="form-control" id="upiId" placeholder="Enter UPI ID">
+                  </div>
+                  <div class="form-group">
+                    <label for="upiName">Name on UPI</label>
+                    <input type="text" class="form-control" id="upiName" placeholder="Enter Name on UPI">
+                  </div>
+                  <div class="form-group">
+                    <label for="upiBank">Bank Name</label>
+                    <input type="text" class="form-control" id="upiBank" placeholder="Enter Bank Name">
+                  </div>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="primaryUPI">
+                      <label class="custom-control-label" for="primaryUPI">Make Primary</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="net-banking">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h4 class="card-title">Net Banking</h4>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="bankName">Bank Name</label>
+                    <input type="text" class="form-control" id="bankName" placeholder="Enter bank name">
+                  </div>
+                  <div class="form-group">
+                    <label for="bankAccountNumber">Bank Account Number</label>
+                    <input type="text" class="form-control" id="bankAccountNumber" placeholder="Enter bank account number">
+                  </div>
+                  <div class="form-group">
+                    <label for="bankIFSC">Bank IFSC Code</label>
+                    <input type="text" class="form-control" id="bankIFSC" placeholder="Enter bank IFSC code">
+                  </div>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="primaryBank">
+                      <label class="custom-control-label" for="primaryBank">Make Primary</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="wallets">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h4 class="card-title">Wallets</h4>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="walletName">Wallet Name</label>
+                    <select class="form-control" id="walletName">
+                      <option>Paytm wallet</option>
+                      <option>PhonePe wallet</option>
+                      <option>Amazon Pay wallet</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="walletNumber">Wallet Number</label>
+                    <input type="text" class="form-control" id="walletNumber" placeholder="Enter wallet number">
+                  </div>
+                  <div class="form-group">
+                    <label for="walletUPI">Wallet UPI ID</label>
+                    <input type="text" class="form-control" id="walletUPI" placeholder="Enter wallet UPI ID">
+                  </div>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" class="custom-control-input" id="primaryWallet">
+                      <label class="custom-control-label" for="primaryWallet">Make Primary</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="saved-details">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h4 class="card-title">Saved Payment Methods</h4>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card mb-4">
+                      <div class="card-header">
+                        <h5 class="card-title">Credit Cards</h5>
+                        <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addCreditCardModal">
+                          Add New
+                        </button>
+                      </div>
+                      <div class="card-body">
+                        <ul class="list-group">
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                            **** **** **** 1234
+                            <span class="badge badge-primary badge-pill">Primary</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                            **** **** **** 5678
+                            <span class="badge badge-secondary badge-pill">Not Primary</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card mb-4">
+                      <div class="card-header">
+                        <h5 class="card-title">UPI</h5>
+                        <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addUpiModal">
+                          Add New
+                        </button>
+                      </div>
+                      <div class="card-body">
+                        <ul class="list-group">
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                            user@bank
+                            <span class="badge badge-primary badge-pill">Primary</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                            user2@bank
+                            <span class="badge badge-secondary badge-pill">Not Primary</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card mb-4">
+                      <div class="card-header">
+                        <h5 class="card-title">Net Banking</h5>
+                        <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addNetBankingModal">
+                          Add New
+                        </button>
+                      </div>
+                      <div class="card-body">
+                        <ul class="list-group">
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Bank of America
+                            <span class="badge badge-primary badge-pill">Primary</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Wells Fargo
+                            <span class="badge badge-secondary badge-pill">Not Primary</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Saved Wallets -->
+                  <div class="card mb-4">
+                    <div class="card-header">
+                      <h5 class="mb-0">Saved Wallets</h5>
+                    </div>
+                    <div class="card-body">
+                      <ul class="list-group list-group-flush">
+                        <!-- Saved wallet 1 -->
+                        <li class="list-group-item">
+                          <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                              <span class="mr-2">
+                                <img src="https://via.placeholder.com/50x50" alt="wallet-icon">
+                              </span>
+                              <span class="wallet-name">Paytm</span>
+                            </div>
+                            <span class="badge badge-primary">Primary</span>
+                          </div>
+                        </li>
+                        <!-- Add new wallet option -->
+                        <li class="list-group-item">
+                          <button type="button" class="btn btn-link">Add new wallet</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</main>
+
+
+
+
+

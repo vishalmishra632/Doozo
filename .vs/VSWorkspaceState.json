@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\extra",
+    "\\src\\app\\extra\\contactus",
+    "\\src\\app\\extra\\faq",
+    "\\src\\app\\user",
+    "\\src\\app\\user\\mymealplan",
+    "\\src\\assets\\images",
+    "\\src\\assets\\images\\avatars"
+  ],
+  "SelectedNode": "\\src\\app\\user\\user-routing.module.ts",
+  "PreviewInSolutionExplorer": false
+}
